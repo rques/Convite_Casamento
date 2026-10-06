@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Presentes de Casamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Principal -->
+  <header class="header">
+    <div class="header-content">
+      <h1>Aline & Guilherme</h1>
+      <p class="date-location">20 de Dezembro de 2026 • Estância Vasques, Brigadeiro Tobias</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Seção de Galeria -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <span class="ornament">❦</span>
+        <h2>Nossa História</h2>
+        <p>Um pouquinho do nosso amor para compartilhar com vocês</p>
+      </div>
+
+      <div class="photo-grid">
+        <div class="photo-card vertical">
+          <img src="./Imgs/foto 1.jpg" alt="Foto do Casal">
+        </div>
+        <div class="photo-card vertical">
+          <img src="./Imgs/foto 2.jpg" alt="Foto dos Noivos">
+        </div>
+        <div class="photo-card vertical">
+          <img src="./Imgs/foto 3.jpg" alt="Ensaio do Casal">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mensagem dos Noivos -->
+    <section class="welcome-message">
+      <p>Sua presença é o nosso maior presente! Se desejar nos agraciar com algo a mais, preparamos esta lista especial ou a opção de contribuição carinhosa via PIX.</p>
+    </section>
+
+    <!-- Seção do PIX -->
+    <section class="pix-section">
+      <div class="pix-card">
+        <h2>Presente em Dinheiro (PIX)</h2>
+        <p class="pix-desc">Caso prefira nos presentear com qualquer valor em dinheiro para a nossa Lua de Mel:</p>
+        <div class="pix-box">
+          <input type="text" id="pixKey" value="alinemarques288@gmail.com" readonly>
+          <button id="btnCopiarPix">Copiar Chave PIX</button>
+        </div>
+        <span id="pixAlert" class="pix-alert">Chave PIX copiada com sucesso! ♡</span>
+      </div>
+    </section>
+
+    <!-- Seção Lista de Presentes -->
+    <section class="gifts-section">
+      <div class="section-header">
+        <span class="ornament">❦</span>
+        <h2>Lista de Presentes</h2>
+        <p>Escolha um carinho para a nossa nova vida a dois</p>
+      </div>
+
+      <!-- Barra de Resumo e Busca -->
+      <div class="stats-bar">
+        <div class="stats-info">
+          <span>Itens na lista: <strong id="totalCount">0</strong></span>
+          <span class="divider">|</span>
+          <span>Disponíveis: <strong id="availableCount">0</strong></span>
+        </div>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="🔍 Buscar presente...">
+        </div>
+      </div>
+
+      <!-- Layout Filtros + Grid -->
+      <div class="dashboard-layout">
+        
+        <!-- Sidebar de Filtros -->
+        <aside class="filters-sidebar">
+          <div class="filter-group">
+            <h3>Categorias</h3>
+            <ul id="categoryFilterList">
+              <!-- Categorias via JS -->
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3>Faixa de Preço</h3>
+            <ul id="priceFilterList">
+              <li><label><input type="radio" name="priceFilter" value="all" checked> Todos os preços</label></li>
+              <li><label><input type="radio" name="priceFilter" value="0-100"> Até R$ 100</label></li>
+              <li><label><input type="radio" name="priceFilter" value="100-250"> R$ 100 a R$ 250</label></li>
+              <li><label><input type="radio" name="priceFilter" value="250-500"> R$ 250 a R$ 500</label></li>
+              <li><label><input type="radio" name="priceFilter" value="500-99999"> Acima de R$ 500</label></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Grid de Cards de Presente -->
+        <div class="cards-grid" id="giftsGrid">
+          <!-- Cards via JS -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer-names">Aline & Guilherme</p>
+    <p>Com amor e gratidão por fazer parte da nossa jornada!</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
